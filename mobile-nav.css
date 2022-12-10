@@ -1,0 +1,129 @@
+nav {
+  background-color: black;
+  list-style: none;
+  text-align: center;
+  margin-bottom: 1px;
+  position: fixed;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: right;
+}
+
+li {
+  padding: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        background-color: black;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 1px;
+        position: fixed;
+        width: 100%;
+        padding: 43px;
+        
+      }
+      
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+      }
+      
+      li {
+        padding: 10px;
+        display: inline;
+      }
+
+      .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+}
+
+@media screen and (min-width: 1024px) {
+    nav {
+        background-color: black;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 1px;
+        position: fixed;
+        width: 100%;
+        padding: 43px;
+        
+      }
+      
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+      }
+      
+      li {
+        padding: 10px;
+        display: inline;
+      }
+
+
+      .galeria{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+                    "k1 k2 k3"
+                    "k4 k4 k4"
+                    "k5 k6 k7"
+                    "k8 k8 k8";
+      }
+
+      img{
+        filter: grayscale(100%);
+        
+        transition: ease-in-out .35s;
+      }
+
+      img:hover{
+        filter: grayscale(0);
+        margin: 12px;
+        border-radius: 10px;
+        animation: show ease-in-out .35s forwards;
+      }
+
+      @keyframes show {
+        0%{
+          
+        }
+        100%{
+           transform: rotate(360deg);
+        }
+      }
+
+      #k1{
+        grid-area: k1;
+      }
+      #k2{
+        grid-area: k2;
+      }
+      #k3{
+        grid-area: k3;
+      }
+      #k4{
+        grid-area: k4;
+      }
+      #k5{
+        grid-area: k5;
+      }
+      #k6{
+        grid-area: k6;
+      }
+      #k7{
+        grid-area: k7;
+      }
+      #k8{
+        grid-area: k8;
+      }
+}
